@@ -20,3 +20,6 @@ The Tutorial is broken down into a **Front End** (user interface) and a **Back E
 
 ## Summary
 The end product will have two pages:  a login page and a dashboard page.  The login page is available to guests and authenticated users, while the dashboard page is only accessible to the authenticated users.  This tutorial is primarily about the authentication mechanism, not the storage of credentials.  Therefore it will have some shortcuts on the server (Such as using an array data storage method instead of database connection).  Lastly, the tutorial already supplies GitHub links to the [Front End](https://github.com/JscramblerBlog/jscrambler-vueauthclient) and [Back End](https://github.com/JscramblerBlog/jscrambler-vueauthclient-backend).
+
+## Note
+***I have just started the tutorial.  I'll remove this note when the tutorial is complete.***
