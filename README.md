@@ -2,7 +2,7 @@
 This repository is dedicated to [Lamin Sanneh](https://blog.jscrambler.com/author/lamin-sanneh)'s tutorial, [Vue.js Authentication System with Node.js Backend](https://blog.jscrambler.com/vue-js-authentication-system-with-node-js-backend/).  **All credit for code origination goes to Lamin Sanneh's blog post from JScrambler, and this is hosted as an academic exercise to learn more about Authentication with Vue.js, as well as improve skills with the Git version control software**
 
 ## Breakdown
-The Tutorial is broken down into a **Front End** (user interface) and a **Back End** (server).  
+The Tutorial is broken down into a **Front End** (client) and a **Back End** (server).  
 
 - The **Front End** uses the following packages:
   - [Vue CLI](https://www.npmjs.com/package/@vue/cli) to scaffold project.
