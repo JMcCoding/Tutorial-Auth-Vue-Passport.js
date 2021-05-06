@@ -6,6 +6,7 @@ The Tutorial is broken down into a **Front End** (user interface) and a **Back E
 
 - The **Front End** uses the following packages:
   - [Vue CLI](https://www.npmjs.com/package/@vue/cli) to scaffold project.
+  - [@vue/cli-init](https://www.npmjs.com/package/@vue/cli-init) to initialize front end project folder.
   - [webpack](https://webpack.js.org/) to bundle the JS.
   - [axios](https://www.npmjs.com/package/axios) to perform network calls.
   - [vue-cookies](https://www.npmjs.com/package/vue-cookies) to store session data.
