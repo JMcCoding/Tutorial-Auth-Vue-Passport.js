@@ -6,16 +6,16 @@ The Tutorial is broken down into a **Front End** (user interface) and a **Back E
 
 - The **Front End** uses the following packages:
   - [Vue CLI](https://www.npmjs.com/package/@vue/cli) to scaffold project.
-  - [Webpack](https://webpack.js.org/) to bundle the JS.
-  - [Axios](https://www.npmjs.com/package/axios) to perform network calls.
-  - [Vue Cookies](https://www.npmjs.com/package/vue-cookies) to store session data.
+  - [webpack](https://webpack.js.org/) to bundle the JS.
+  - [axios](https://www.npmjs.com/package/axios) to perform network calls.
+  - [vue-cookies](https://www.npmjs.com/package/vue-cookies) to store session data.
 
 - The **Back End** uses the following packages:
-  - [NodeJS](https://nodejs.org/en/) to run.
-  - [Express](https://www.npmjs.com/package/express) to act as an API server.
+  - [Node.js](https://nodejs.org/en/) to run.
+  - [Express.js](https://www.npmjs.com/package/express) to act as an API server.
   - [body-parser](https://www.npmjs.com/package/body-parser) to access values from AJAX requests.
   - [cookie-session](https://www.npmjs.com/package/cookie-session) to work with cookies server-side.
-  - [passport](https://www.npmjs.com/package/passport) to help authenticate users.
+  - [Passport](https://www.npmjs.com/package/passport) to help authenticate users.
   - [passport-local](https://www.npmjs.com/package/passport-local) to add a *Strategy* (which is a passport.js-specific authentication module) to passport for local authentication.
 
 ## Summary
