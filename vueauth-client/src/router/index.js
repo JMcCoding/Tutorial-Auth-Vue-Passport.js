@@ -1,7 +1,7 @@
-import Vue from 'vue';
-import Router from 'vue-router';
-import Login from "@/components/Login";
-import HelloWorld from '@/components/HelloWorld';
+import Vue from 'vue'
+import Router from 'vue-router'
+import Login from '@/components/Login'
+import HelloWorld from '@/components/HelloWorld'
 
 Vue.use(Router)
 
@@ -13,8 +13,8 @@ export default new Router({
       component: HelloWorld
     },
     {
-      path: "/login",
-      name: "Login",
+      path: '/login',
+      name: 'Login',
       component: Login
     }
   ]
