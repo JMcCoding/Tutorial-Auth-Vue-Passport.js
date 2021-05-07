@@ -1,13 +1,16 @@
 const express = require('express')
 
+
 // Create the Express.js Instance
 const app = express()
 const cookieSession = require('cookie-session')
 const bodyParser = require('body-parser')
 const passport = require('passport')
 
+
 // Get the local passport authentication Strategy
 const LocalStrategy = require('passport-local').Strategy
+
 
 // Initialize middleware
 app.use(bodyParser.json()) // May no longer be necessary.
@@ -22,6 +25,32 @@ app.use(passport.initialize())
 
 app.use(passport.session())
 
+
+// Configure passport's auth strategy
+let fieldNames = {
+  usernameField: 'email',
+  passwordField: 'password'
+}
+
+let loginMethod = (username, password, done) => {
+  let user = users.find(user => user.email === username && user.password === password)
+
+  if (user)
+    done(null, user)
+  else
+    done(null, false, {message: 'Incorrect username or password'})
+}
+
+passport.use(new LocalStrategy(fieldNames, loginMethod))
+
+
+// Configure passport's session function
+passport.deserializeUser((id, done) => {
+  let user = users.find(user => user.id === id)
+  done(null, user)
+})
+
+
 // Create auth check routing middleware
 const authMiddleware = (req, res, next) => {
   if (!req.isAuthenticated())
@@ -29,6 +58,7 @@ const authMiddleware = (req, res, next) => {
   else
     return next()
 }
+
 
 // Simulated Database Information (just an array)
 let users = [
@@ -45,6 +75,7 @@ let users = [
     password: 'password2'
   }
 ]
+
 
 // Set up server routes
 app.post('/api/login', (req, res, next) => {
@@ -71,4 +102,9 @@ app.get('/api/user', authMiddleware, (req, res) => {
   console.log([user, req.session])
 
   res.send({user: user})
+})
+
+// Execution code
+app.listen(3000, () => {
+  console.log("Example App listening on port 3000")
 })
