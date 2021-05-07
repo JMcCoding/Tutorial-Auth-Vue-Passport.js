@@ -1,0 +1,22 @@
+{
+  "name": "vueauth-server",
+  "version": "1.0.0",
+  "description": "A project following the Lamin Sanneh's tutorial, named \"Vue.js Authentication System with Node.js Backend\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JMcCoding/Tutorial-Vue-Authentication-NodeJS-Backend/blob/main/vueauth-server/"
+  },
+  "author": "Joseph McCurley (JMcCoding)",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-session": "^1.4.0",
+    "express": "^4.17.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  }
+}

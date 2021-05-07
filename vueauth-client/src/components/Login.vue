@@ -16,10 +16,10 @@ import axios from 'axios'
 export default {
   name: 'Login',
   methods: {
-    login: (e) => {
+    login: e => {
       e.preventDefault()
-      let email = 'user@email.com'
-      let password = 'password'
+      let email = e.target.elements.email.value
+      let password = e.target.elements.password.value
 
       let login = () => {
         let data = {
@@ -29,11 +29,11 @@ export default {
 
         axios
           .post('/api/login', data)
-          .then((response) => {
+          .then(response => {
             console.log('Logged in')
             router.push('/dashboard')
           })
-          .catch((errors) => {
+          .catch(errors => {
             console.log('Cannot log in')
           })
       }
