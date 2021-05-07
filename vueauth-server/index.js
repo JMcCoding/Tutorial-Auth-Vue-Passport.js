@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 
 
@@ -24,6 +25,10 @@ app.use(cookieSession({
 app.use(passport.initialize())
 
 app.use(passport.session())
+
+const publicRoot = path.resolve(__dirname, '../vueauth-client/dist')
+
+app.use(express.static(publicRoot))
 
 
 // Configure passport's auth strategy
@@ -81,6 +86,10 @@ let users = [
 
 
 // Set up server routes
+app.get('/', (req, res, next) => {
+  res.sendFile("index.html", { root: publicRoot })
+})
+
 app.post('/api/login', (req, res, next) => {
   passport.authenticate('local', (err, user, info) => {
     if (err)
@@ -106,6 +115,7 @@ app.get('/api/user', authMiddleware, (req, res) => {
 
   res.send({user: user})
 })
+
 
 // Execution code
 app.listen(3000, () => {
