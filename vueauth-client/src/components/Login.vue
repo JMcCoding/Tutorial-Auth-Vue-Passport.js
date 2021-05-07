@@ -18,7 +18,7 @@ export default {
   methods: {
     login: e => {
       e.preventDefault()
-      let email = 'jesse@email.com'
+      let email = 'jude@email.com'
       let password = 'password'
 
       let login = () => {

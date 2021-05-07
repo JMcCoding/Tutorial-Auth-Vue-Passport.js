@@ -45,6 +45,9 @@ passport.use(new LocalStrategy(fieldNames, loginMethod))
 
 
 // Configure passport's session function
+passport.serializeUser((user, done) => {
+  done(null, user.id)
+})
 passport.deserializeUser((id, done) => {
   let user = users.find(user => user.id === id)
   done(null, user)
