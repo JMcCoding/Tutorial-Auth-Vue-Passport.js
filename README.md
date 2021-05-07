@@ -1,4 +1,4 @@
-# Tutorial-Vue-Authentication-NodeJS-Backend
+# Tutorial-Auth-Vue-Passport.js
 This repository is dedicated to [Lamin Sanneh](https://blog.jscrambler.com/author/lamin-sanneh)'s tutorial, [Vue.js Authentication System with Node.js Backend](https://blog.jscrambler.com/vue-js-authentication-system-with-node-js-backend/).  **All credit for code origination goes to Lamin Sanneh's blog post from JScrambler, and this is hosted as an academic exercise to learn more about Authentication with Vue.js, as well as improve skills with the Git version control software**
 
 ## Breakdown
